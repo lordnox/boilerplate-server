@@ -1,0 +1,33 @@
+extends layout
+
+block title
+  title My Awesome App!
+
+block append css
+  link(rel='stylesheet', href='/styles/app.css')
+
+block append top-script
+
+
+block prepend main
+  .container
+    include includes/header
+
+    .content
+
+    include includes/footer
+      div.attribution.
+        Photo by:
+        Colin Smith [<a href="http://creativecommons.org/licenses/by-sa/2.0">CC-BY-SA-2.0</a>], <a href="https://commons.wikimedia.org/wiki/File%3AScooby_Dooby_Doo_-_geograph.org.uk_-_1385012.jpg">via Wikimedia Commons</a>
+
+block append bottom-script
+  script!= bootstrap
+
+  - if (dev)
+    //- has.js is used to branch requirejs modules' returned values in a test environment like mocha.
+        since the modules themselves contain has() tests, we need to include them in the dev environment.
+        during a build, r.js will optimize out the has() tests, so has.js is not needed in production.
+    script(src='/components/has/has.js')
+    script(src='/components/requirejs/require.js', data-main='/scripts/app/config')
+  - else
+    script(src='/scripts/app/main.js')
