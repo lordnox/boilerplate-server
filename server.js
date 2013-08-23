@@ -173,6 +173,12 @@ app.get('/', function(req, res, next) {
   });
 });
 
+app.get('/templates/*', function(req, res, next) {
+  var path = req.params[0];
+
+  res.render('partials/' + path);
+})
+
 app.get('/normal', function(req, res, next) {
   res.render('normal');
 });

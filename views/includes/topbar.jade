@@ -1,0 +1,113 @@
+.navbar(ng-controller="navigationController")
+  .navbar-inner
+    ul.nav.pull-right
+      li.visible-phone-landscape
+        a#search-toggle(href='#')
+          i.icon-search
+      li.dropdown
+        a#messages.dropdown-toggle(href='#', title='Messages', data-toggle='dropdown')
+          i.icon-comments
+        ul#messages-menu.dropdown-menu.messages(role='menu')
+          li(role='presentation')
+            a.message(href='#')
+              img(src='img/1.jpg', alt='')
+              .details
+                .sender Jane Hew
+                .text
+                  | Hey, John! How is it going? ...
+          li(role='presentation')
+            a.message(href='#')
+              img(src='img/2.jpg', alt='')
+              .details
+                .sender Alies Rumiancaŭ
+                .text
+                  | I'll definitely buy this template
+          li(role='presentation')
+            a.message(href='#')
+              img(src='img/3.jpg', alt='')
+              .details
+                .sender Michał Rumiancaŭ
+                .text
+                  | Is it really Lore ipsum? Lore ...
+          li(role='presentation')
+            a.text-align-center.see-all(href='#')
+              | See all messages
+              i.icon-arrow-right
+      li.dropdown
+        a.dropdown-toggle(href='#', title='8 support tickets', data-toggle='dropdown')
+          i.icon-group
+          span.count 8
+        ul#support-menu.dropdown-menu.support(role='menu')
+          li(role='presentation')
+            a.support-ticket(href='#')
+              .picture
+                span.label.label-important
+                  i.icon-bell-alt
+              .details
+                | Check out this awesome ticket
+          li(role='presentation')
+            a.support-ticket(href='#')
+              .picture
+                span.label.label-warning
+                  i.icon-question-sign
+              .details
+                | "What is the best way to get ...
+          li(role='presentation')
+            a.support-ticket(href='#')
+              .picture
+                span.label.label-success
+                  i.icon-tag
+              .details
+                | This is just a simple notification
+          li(role='presentation')
+            a.support-ticket(href='#')
+              .picture
+                span.label.label-info
+                  i.icon-info-sign
+              .details
+                | 12 new orders has arrived today
+          li(role='presentation')
+            a.support-ticket(href='#')
+              .picture
+                span.label.label-important
+                  i.icon-plus
+              .details
+                | One more thing that just happened
+          li(role='presentation')
+            a.text-align-center.see-all(href='#')
+              | See all tickets
+              i.icon-arrow-right
+      li.divider
+      li.hidden-phone
+        a#settings(href='#', title='Settings', data-toggle='popover', data-placement='bottom')
+          i.icon-cog
+      li.hidden-phone.dropdown
+        a#account.dropdown-toggle(href='#', title='Account', data-toggle='dropdown')
+          i.icon-user
+        ul#account-menu.dropdown-menu.account(role='menu')
+          li.account-picture(role='presentation')
+            img(src='img/2.jpg', alt='')
+            | Philip Daineka
+          li(role='presentation')
+            a.link(href='form_account.html')
+              i.icon-user
+              | Profile
+          li(role='presentation')
+            a.link(href='component_calendar.html')
+              i.icon-calendar
+              | Calendar
+          li(role='presentation')
+            a.link(href='#')
+              i.icon-inbox
+              | Inbox
+      li.visible-phone
+        a.btn-navbar(href='#', data-toggle='collapse', data-target='.sidebar', title='')
+          i.icon-reorder
+      li.hidden-phone
+        a(href='login.html')
+          i.icon-signout
+
+    form#search-form.navbar-search.pull-right
+      input.search-query(type='search', placeholder='Search...')
+
+    div(notification="flashMessages")

@@ -53,8 +53,8 @@ module.exports = function (grunt) {
                 livereload: true
             },
             stylus: {
-                files: ['<%= yeoman.app %>/styles/app.css'],
-                tasks: ['stylus:server'],
+                files: ['<%= yeoman.app %>/styles/app.styl'],
+                tasks: ['stylus:compile'],
                 options: {
                     livereload: false
                 }
@@ -186,11 +186,15 @@ module.exports = function (grunt) {
         stylus: {
             compile: {
                 options: {
-                    paths: ['app/components'],
-                    import: ['nib']
+                    paths: [''],
+                    import: ['nib'],
+                    compress: false,
+                    'include css': true,
+                    firebug: true,
+                    linenos: true
                 },
                 files: {
-                    '<%= yeoman.tmp %>/styles/app.css': ['<%= yeoman.app %>/styles/app.stylus']
+                    '<%= yeoman.app %>/styles/app.css': ['<%= yeoman.app %>/styles/app.styl']
                 }
             },
             dist: {
@@ -199,12 +203,6 @@ module.exports = function (grunt) {
                     'include css': true
                 }
             },
-            server: {
-                options: {
-                    firebug: true,
-                    linenos: true
-                }
-            }
         },
         compass: {
             options: {
@@ -421,11 +419,11 @@ module.exports = function (grunt) {
             },
             server: [
                 'coffee:dist',
-                'stylus:server',
+                'stylus:compile',
             ],
             test: [
                 'coffee',
-                'stylus',
+                'stylus:compile',
             ],
             dist: [
                 'coffee',
@@ -680,9 +678,8 @@ module.exports = function (grunt) {
 
         'concurrent:dist',
 
-        // place after stylus:dist in order to
-        // ensure stylus spritemaps are generated
-        // before images are copied over to dist/
+        'stylus:compile',
+
         'imagemin',
 
         'uglify:dist',

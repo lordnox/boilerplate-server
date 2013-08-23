@@ -4,15 +4,23 @@ block title
   title My Awesome App!
 
 block append css
-  link(rel='stylesheet', href='/styles/app.css')
+  - if(dev)
+    link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap-responsive.css')
+    link(rel='stylesheet', href='/components/angular-ui/build/angular-ui.css')
+    link(rel='stylesheet', href='/styles/app.css')
 
 block append top-script
 
 block prepend main
-  .container
+  .container(ng-app="App", ng-controller="mainController")
+
     include includes/header
 
+    include includes/sidebar
+
     .content
+      h3 Hello
 
     include includes/footer
 
@@ -23,9 +31,14 @@ block append bottom-script
     script(src='/components/jquery/jquery.js')
     script(src='/components/angular/angular.js')
     script(src='/components/angular-localstorage/localStorageModule.js')
+    script(src='/components/angular-ui/build/angular-ui.js')
+
+    script(src='/vendor/bootstrap/js/bootstrap.js')
 
     script(src='/scripts/app.js')
     script(src='/scripts/services/database.js')
-    script(src='/scripts/controllers/mainCtrl.js')
+    script(src='/scripts/directives/notification.js')
+    script(src='/scripts/controllers/mainController.js')
+    script(src='/scripts/controllers/navigationController.js')
   - else
     script(src='/scripts/app/main.js')

@@ -1,0 +1,793 @@
+!!! 5
+html
+head
+    title Light Blue - Admin Template
+    link(href='css/application.min.css', rel='stylesheet')
+    link(href='css/application.mod.css', rel='stylesheet')
+    link(rel='shortcut icon', href='img/favicon.png')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    meta(charset='utf-8')
+  body.background-dark
+    .logo
+      h4
+        a(href='index.html')
+          | Light
+          strong Blue
+    nav#sidebar.sidebar.nav-collapse.collapse
+      ul#side-nav.side-nav
+        li.active
+          a(href='index.html')
+            i.icon-desktop
+            span.name Dashboard
+        li.accordion-group
+          a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#side-nav', href='#forms-collapse')
+            i.icon-edit
+            span.name Forms
+          ul#forms-collapse.accordion-body.collapse
+            li
+              a(href='form_account.html') Account
+            li
+              a(href='form_article.html') Article
+            li
+              a(href='form_elements.html') Elements
+            li
+              a(href='form_validation.html') Validation
+            li
+              a(href='form_wizard.html') Wizard
+        li.accordion-group
+          a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#side-nav', href='#stats-collapse')
+            i.icon-bar-chart
+            span.name Statistics
+          ul#stats-collapse.accordion-body.collapse
+            li
+              a(href='stat_statistics.html') Stats
+            li
+              a(href='stat_charts.html') Charts
+            li
+              a(href='stat_realtime.html') Realtime
+        li.accordion-group
+          a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#side-nav', href='#ui-collapse')
+            i.icon-magic
+            span.name User Interface
+          ul#ui-collapse.accordion-body.collapse
+            li
+              a(href='ui_buttons.html') Buttons
+            li
+              a(href='ui_dialogs.html') Dialogs
+            li
+              a(href='ui_icons.html') Icons
+            li
+              a(href='ui_tabs.html') Tabs
+            li
+              a(href='ui_accordion.html') Accordion
+        li.accordion-group
+          a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#side-nav', href='#components-collapse')
+            i.icon-bookmark-empty
+            span.name Components
+          ul#components-collapse.accordion-body.collapse
+            li
+              a(href='component_calendar.html') Calendar
+            li
+              a(href='component_maps.html') Maps
+            li
+              a(href='component_gallery.html') Gallery
+            li
+              a(href='component_fileupload.html') Fileupload
+        li.accordion-group
+          a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#side-nav', href='#tables-collapse')
+            i.icon-table
+            span.name Tables
+          ul#tables-collapse.accordion-body.collapse
+            li
+              a(href='tables_static.html') Static
+            li
+              a(href='tables_dynamic.html') Dynamic
+        li
+          a(href='grid.html')
+            i.icon-reorder
+            span.name Grid
+        li.accordion-group
+          a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#side-nav', href='#special-collapse')
+            i.icon-asterisk
+            span.name Special
+          ul#special-collapse.accordion-body.collapse
+            li
+              a(href='special_search.html') Search
+            li
+              a(href='login.html') Login
+            li
+              a(href='special_404.html') 404
+        li.visible-phone
+          a(href='login.html')
+            i.icon-signout
+            span.name Sign Out
+      #sidebar-settings.settings
+        button.btn-icons.btn.btn-transparent.btn-small(type='button', data-value='icons') Icons
+        button.btn-auto.btn.btn-transparent.btn-small(type='button', data-value='auto') Auto
+    .wrap
+      header.page-header
+        .navbar
+          .navbar-inner
+            ul.nav.pull-right
+              li.visible-phone-landscape
+                a#search-toggle(href='#')
+                  i.icon-search
+              li.dropdown
+                a#messages.dropdown-toggle(href='#', title='Messages', data-toggle='dropdown')
+                  i.icon-comments
+                ul#messages-menu.dropdown-menu.messages(role='menu')
+                  li(role='presentation')
+                    a.message(href='#')
+                      img(src='img/1.jpg', alt='')
+                      .details
+                        .sender Jane Hew
+                        .text
+                          | Hey, John! How is it going? ...
+                  li(role='presentation')
+                    a.message(href='#')
+                      img(src='img/2.jpg', alt='')
+                      .details
+                        .sender Alies Rumiancaŭ
+                        .text
+                          | I'll definitely buy this template
+                  li(role='presentation')
+                    a.message(href='#')
+                      img(src='img/3.jpg', alt='')
+                      .details
+                        .sender Michał Rumiancaŭ
+                        .text
+                          | Is it really Lore ipsum? Lore ...
+                  li(role='presentation')
+                    a.text-align-center.see-all(href='#')
+                      | See all messages
+                      i.icon-arrow-right
+              li.dropdown
+                a.dropdown-toggle(href='#', title='8 support tickets', data-toggle='dropdown')
+                  i.icon-group
+                  span.count 8
+                ul#support-menu.dropdown-menu.support(role='menu')
+                  li(role='presentation')
+                    a.support-ticket(href='#')
+                      .picture
+                        span.label.label-important
+                          i.icon-bell-alt
+                      .details
+                        | Check out this awesome ticket
+                  li(role='presentation')
+                    a.support-ticket(href='#')
+                      .picture
+                        span.label.label-warning
+                          i.icon-question-sign
+                      .details
+                        | "What is the best way to get ...
+                  li(role='presentation')
+                    a.support-ticket(href='#')
+                      .picture
+                        span.label.label-success
+                          i.icon-tag
+                      .details
+                        | This is just a simple notification
+                  li(role='presentation')
+                    a.support-ticket(href='#')
+                      .picture
+                        span.label.label-info
+                          i.icon-info-sign
+                      .details
+                        | 12 new orders has arrived today
+                  li(role='presentation')
+                    a.support-ticket(href='#')
+                      .picture
+                        span.label.label-important
+                          i.icon-plus
+                      .details
+                        | One more thing that just happened
+                  li(role='presentation')
+                    a.text-align-center.see-all(href='#')
+                      | See all tickets
+                      i.icon-arrow-right
+              li.divider
+              li.hidden-phone
+                a#settings(href='#', title='Settings', data-toggle='popover', data-placement='bottom')
+                  i.icon-cog
+              li.hidden-phone.dropdown
+                a#account.dropdown-toggle(href='#', title='Account', data-toggle='dropdown')
+                  i.icon-user
+                ul#account-menu.dropdown-menu.account(role='menu')
+                  li.account-picture(role='presentation')
+                    img(src='img/2.jpg', alt='')
+                    | Philip Daineka
+                  li(role='presentation')
+                    a.link(href='form_account.html')
+                      i.icon-user
+                      | Profile
+                  li(role='presentation')
+                    a.link(href='component_calendar.html')
+                      i.icon-calendar
+                      | Calendar
+                  li(role='presentation')
+                    a.link(href='#')
+                      i.icon-inbox
+                      | Inbox
+              li.visible-phone
+                a.btn-navbar(href='#', data-toggle='collapse', data-target='.sidebar', title='')
+                  i.icon-reorder
+              li.hidden-phone
+                a(href='login.html')
+                  i.icon-signout
+            form#search-form.navbar-search.pull-right
+              input.search-query(type='search', placeholder='Search...')
+            .notifications.pull-right
+              .alert.pull-right
+                a.close(href='#', data-dismiss='alert') ×
+                i.icon-info-sign
+                | Check out Light Blue
+                a#notification-link(href='#') settings
+                | on the right!
+      .content.container-fluid
+        .row-fluid
+          .span12
+            h2.page-title
+              | Dashboard
+              small Statistics and more
+        .row-fluid
+          .span8
+            section.widget
+              header
+                h4
+                  i.icon-group
+                  | Visits
+                  small
+                    | Based on a three months data
+              .body.no-margin
+                #visits-chart.chart.visits-chart
+                  svg
+                .visits-info.well.well-small
+                  .row-fluid
+                    .span3
+                      .key
+                        i.eicon-users
+                        | Total Traffic
+                      .value
+                        | 24 541
+                        i.icon-caret-up.color-green
+                    .span3
+                      .key
+                        i.eicon-user
+                        | Unique Visits
+                      .value
+                        | 14 778
+                        i.icon-caret-down.color-red
+                    .span3
+                      .key
+                        i.icon-plus-sign-alt
+                        | Revenue
+                      .value
+                        | $3 583.18
+                        i.icon-caret-up.color-green
+                    .span3
+                      .key
+                        i.icon-user
+                        | Total Sales
+                      .value
+                        | $59 871.12
+                        i.icon-caret-down.color-red
+            section.widget
+              header
+                h4
+                  i.icon-shopping-cart
+                  | Traffic Sources
+                  small
+                    | One month tracking
+                table.table.table-striped.no-margin.sources-table
+                  thead
+                    tr
+                      th.source-col-header Source
+                      th Amount
+                      th Change
+                      th.hidden-phone Percent.,%
+                      th Target
+                      th.chart-col-header.hidden-phone Trend
+                  tbody
+                    tr
+                      td
+                        span.label.label-important Direct
+                      td 713
+                      td
+                        strong.color-green +53
+                      td.hidden-phone +12
+                      td 900
+                      td.chart-cell.hidden-phone
+                        #direct-trend
+                    tr
+                      td
+                        span.label.label-warning Refer
+                      td 562
+                      td
+                        strong +84
+                      td.hidden-phone +64
+                      td 500
+                      td.chart-cell.hidden-phone
+                        #refer-trend
+                    tr
+                      td
+                        span.label.label-success Social
+                      td 148
+                      td
+                        strong.color-red -12
+                      td.hidden-phone +3
+                      td 180
+                      td.chart-cell.hidden-phone
+                        #social-trend
+                    tr
+                      td
+                        span.label.label-info Search
+                      td 653
+                      td
+                        strong.color-green +23
+                      td.hidden-phone +43
+                      td 876
+                      td.chart-cell.hidden-phone
+                        #search-trend
+                    tr
+                      td
+                        span.label.label-inverse Internal
+                      td 976
+                      td
+                        strong +101
+                      td.hidden-phone -7
+                      td 844
+                      td.chart-cell.hidden-phone
+                        #internal-trend
+            section.widget.large
+              header
+                h4
+                  i.eicon-chat
+                  | Chat
+              .body
+                #chat.chat
+                  #chat-messages.chat-messages
+                    .chat-message
+                      .sender.pull-left
+                        .icon
+                          img.img-circle(src='img/2.jpg', alt='')
+                        .time
+                          | 4 min
+                      .chat-message-body
+                        span.arrow
+                        .sender
+                          a(href='#') Tikhon Laninga
+                        .text
+                          | Hey Sam, how is it going? But I must explain to you how all this mistaken
+                          | idea of denouncing of a pleasure and praising pain was born
+                    .chat-message
+                      .sender.pull-right
+                        .icon
+                          img.img-circle(src='img/1.jpg', alt='')
+                        .time
+                          | 3 min
+                      .chat-message-body.on-left
+                        span.arrow
+                        .sender
+                          a(href='#') Cenhelm Houston
+                        .text
+                          | Pretty good. Doing my homework..  No one rejects, dislikes, or avoids
+                          | pleasure itself, because it is pleasure, but because
+                    .chat-message
+                      .sender.pull-left
+                        .icon
+                          img.img-circle(src='img/2.jpg', alt='')
+                        .time
+                          | 2 min
+                      .chat-message-body
+                        span.arrow
+                        .sender
+                          a(href='#') Tikhon Laninga
+                        .text
+                          | Any chance to go out? To take a trivial example, which of us ever undertakes
+                          | laborious physical exercise, except to obtain some advantage
+                    .chat-message
+                      .sender.pull-right
+                        .icon
+                          img.img-circle(src='img/1.jpg', alt='')
+                        .time
+                          | 2 min
+                      .chat-message-body.on-left
+                        span.arrow
+                        .sender
+                          a(href='#') Cenhelm Houston
+                        .text
+                          | .. Maybe 40-50 mins. I don't know exactly. On the other hand, we denounce
+                          | with righteous indignation and dislike men who are so beguiled
+                    .chat-message
+                      .sender.pull-left
+                        .icon
+                          img.img-circle(src='img/2.jpg', alt='')
+                        .time
+                          | 1 min
+                      .chat-message-body
+                        span.arrow
+                        .sender
+                          a(href='#') Tikhon Laninga
+                        .text
+                          | Anyway sounds great! These cases are perfectly simple and easy to
+                          | distinguish.
+                  .row-fluid.non-responsive
+                    footer.chat-footer.controls-row
+                      input#new-message.span10(type='text', placeholder='Enter your message..')
+                      button#new-message-btn.btn.btn-transparent.span2(type='button') Send
+          .span4
+            section.widget.large
+              header
+                h4
+                  i.eicon-share
+                  | Feed
+                .actions
+                  button.btn.btn-transparent.btn-mini
+                    | Show All
+                    i.icon-arrow-down
+              .body
+                #feed.feed
+                  .wrapper
+                    .vertical-line
+                    section.feed-item
+                      .icon.pull-left
+                        i.icon-comment
+                      .feed-item-body
+                        .text
+                          a(href='#') John Doe
+                          | commented on
+                          a(href='#') What Makes Good Code Good
+                          | .
+                        .time.pull-left
+                          | 3 h
+                    section.feed-item
+                      .icon.pull-left
+                        i.icon-ok.color-green
+                      .feed-item-body
+                        .text
+                          a(href='#') Merge request #42
+                          | has been approved by
+                          a(href='#') Jessica Lori
+                          | .
+                        .time.pull-left
+                          | 10 h
+                    section.feed-item
+                      .icon.pull-left
+                        img.img-circle(src='img/14.jpg', alt='')
+                      .feed-item-body
+                        .text
+                          | New user
+                          a(href='#') Greg Wilson
+                          | registered.
+                        .time.pull-left
+                          | Today
+                    section.feed-item
+                      .icon.pull-left
+                        i.icon-bolt.color-orange
+                      .feed-item-body
+                        .text
+                          | Server fail level raises above normal.
+                          a(href='#') See logs
+                          | for details.
+                        .time.pull-left
+                          | Yesterday
+                    section.feed-item
+                      .icon.pull-left
+                        i.eicon-database
+                      .feed-item-body
+                        .text
+                          a(href='#') Database usage report
+                          | is ready.
+                        .time.pull-left
+                          | Yesterday
+                    section.feed-item
+                      .icon.pull-left
+                        i.icon-shopping-cart
+                      .feed-item-body
+                        .text
+                          a(href='#') Order #233985
+                          | needs additional processing.
+                        .time.pull-left
+                          | Wednesday
+                    section.feed-item
+                      .icon.pull-left
+                        i.icon-arrow-down
+                      .feed-item-body
+                        .text
+                          a(href='#') Load more...
+            section.widget.widget-tabs
+              header
+                ul.nav.nav-tabs
+                  li.active
+                    a(href='#stats', data-toggle='tab') Users
+                  li
+                    a(href='#report', data-toggle='tab') Favorites
+                  li
+                    a(href='#dropdown1', data-toggle='tab') Commenters
+              .body.tab-content
+                #stats.tab-pane.active.clearfix
+                  h5.tab-header
+                    i.icon-group
+                    | Last logged-in users
+                  ul.users-list
+                    li
+                      img.pull-left.img-circle(src='img/1.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Finees Lund
+                        .position Product Designer
+                        .time Last logged-in: Mar 20, 18:46
+                    li
+                      img.pull-left.img-circle(src='img/3.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Erebus Novak
+                        .position Software Engineer
+                        .time Last logged-in: Mar 23, 9:02
+                    li
+                      img.pull-left.img-circle(src='img/2.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Leopoldo Reier
+                        .position Chief Officer
+                        .time Last logged-in: Jun 6, 15:34
+                    li
+                      img.pull-left.img-circle(src='img/13.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Frans Garey
+                        .position Financial Assistant
+                        .time Last logged-in: Jun 8, 17:20
+                    li
+                      img.pull-left.img-circle(src='img/14.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Jessica Johnsson
+                        .position Sales Manager
+                        .time Last logged-in: Jun 8, 9:13
+                #report.tab-pane
+                  h5.tab-header
+                    i.icon-star
+                    | Popular contacts
+                  ul.users-list.user-list-no-hover
+                    li
+                      img.pull-left.img-circle(src='img/14.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Jessica Johnsson
+                        .options
+                          button.btn.btn-mini.btn-success
+                            i.icon-phone
+                            | Call
+                          button.btn.btn-mini.btn-warning
+                            i.icon-envelope-alt
+                            | Message
+                    li
+                      img.pull-left.img-circle(src='img/13.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Frans Garey
+                        .options
+                          button.btn.btn-mini.btn-success
+                            i.icon-phone
+                            | Call
+                          button.btn.btn-mini.btn-warning
+                            i.icon-envelope-alt
+                            | Message
+                    li
+                      img.pull-left.img-circle(src='img/3.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Erebus Novak
+                        .options
+                          button.btn.btn-mini.btn-success
+                            i.icon-phone
+                            | Call
+                          button.btn.btn-mini.btn-warning
+                            i.icon-envelope-alt
+                            | Message
+                    li
+                      img.pull-left.img-circle(src='img/2.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Leopoldo Reier
+                        .options
+                          button.btn.btn-mini.btn-success
+                            i.icon-phone
+                            | Call
+                          button.btn.btn-mini.btn-warning
+                            i.icon-envelope-alt
+                            | Message
+                    li
+                      img.pull-left.img-circle(src='img/1.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Finees Lund
+                        .options
+                          button.btn.btn-mini.btn-success
+                            i.icon-phone
+                            | Call
+                          button.btn.btn-mini.btn-warning
+                            i.icon-envelope-alt
+                            | Message
+                #dropdown1.tab-pane
+                  h5.tab-header
+                    i.icon-comments
+                    | Top Commenters
+                  ul.users-list
+                    li
+                      img.pull-left.img-circle(src='img/13.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Frans Garey
+                        .comment
+                          | Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                          | sed quia
+                    li
+                      img.pull-left.img-circle(src='img/1.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Finees Lund
+                        .comment
+                          | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                          | eu fugiat.
+                    li
+                      img.pull-left.img-circle(src='img/14.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Jessica Johnsson
+                        .comment
+                          | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                          | deserunt.
+                    li
+                      img.pull-left.img-circle(src='img/3.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Erebus Novak
+                        .comment
+                          | Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
+                          | doloremque.
+                    li
+                      img.pull-left.img-circle(src='img/2.jpg', alt='')
+                      .user-info
+                        .name
+                          a(href='#') Leopoldo Reier
+                        .comment
+                          | Laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis
+                          | et quasi.
+            section.widget
+              header
+                h4
+                  i.icon-magnet
+                  | Server Overview
+              .body
+                ul.server-stats
+                  li
+                    .key.pull-right CPU
+                    .stat
+                      .info 60% / 37°C / 3.3 Ghz
+                      .progress.progress-small.progress-danger
+                        .bar(style='width: 70%;')
+                  li
+                    .key.pull-right Mem
+                    .stat
+                      .info 29% / 4GB (16 GB)
+                      .progress.progress-small
+                        .bar(style='width: 29%;')
+                  li
+                    .key.pull-right LAN
+                    .stat
+                      .info
+                        | 6 Mb/s
+                        i.icon-caret-down
+                        | 3 Mb/s
+                        i.icon-caret-up
+                      .progress.progress-small.progress-inverse
+                        .bar(style='width: 48%;')
+    //
+       jquery and friends
+    script(src='lib/jquery/jquery.1.9.0.min.js')
+
+    script(src='lib/jquery/jquery-migrate-1.1.0.min.js')
+
+    //
+       jquery plugins
+    script(src='lib/uniform/js/jquery.uniform.js')
+    script(src='lib/sparkline/jquery.sparkline.js')
+    script(src='lib/jquery-ui-1.10.1.custom.js')
+    script(src='lib/jquery.slimscroll.js')
+    //
+       d3, nvd3
+    script(src='lib/nvd3/lib/d3.v2.js')
+    script(src='lib/nvd3/nv.d3.custom.js')
+    //
+       nvd3 models
+    script(src='lib/nvd3/src/models/scatter.js')
+    script(src='lib/nvd3/src/models/axis.js')
+    script(src='lib/nvd3/src/models/legend.js')
+    script(src='lib/nvd3/src/models/multiBar.js')
+    script(src='lib/nvd3/src/models/multiBarChart.js')
+    script(src='lib/nvd3/src/models/line.js')
+    script(src='lib/nvd3/src/models/lineChart.js')
+    script(src='lib/nvd3/stream_layers.js')
+    //
+      backbone and friends
+    script(src='lib/backbone/underscore-min.js')
+    script(src='lib/backbone/backbone-min.js')
+    script(src='lib/backbone/backbone.localStorage-min.js')
+    //
+       bootstrap default plugins
+    script(src='js/bootstrap/bootstrap-transition.js')
+    script(src='js/bootstrap/bootstrap-collapse.js')
+    script(src='js/bootstrap/bootstrap-alert.js')
+    script(src='js/bootstrap/bootstrap-tooltip.js')
+    script(src='js/bootstrap/bootstrap-popover.js')
+    script(src='js/bootstrap/bootstrap-button.js')
+    script(src='js/bootstrap/bootstrap-tab.js')
+
+    script(src='js/bootstrap/bootstrap-dropdown.js')
+    //
+       basic application js
+    script(src='js/app.js')
+    script(src='js/settings.js')
+    //
+       page specific
+    script(src='js/index.js')
+    script(src='js/chat.js')
+    script#message-template(type='text/template')
+      <div class="sender pull-left">
+      <div class="icon">
+      <img src="img/2.jpg" class="img-circle" alt="">
+      </div>
+      <div class="time">
+      just now
+      </div>
+      </div>
+      <div class="chat-message-body">
+      <span class="arrow"></span>
+      <div class="sender">Tikhon Laninga</div>
+      <div class="text">
+      <%- text %>
+      </div>
+      </div>
+    script#settings-template(type='text/template')
+      <div class="setting clearfix">
+      <div>Background</div>
+      <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+      <% dark = background == 'dark'; light = background == 'light';%>
+      <button type="button" data-value="dark" class="btn btn-small btn-transparent <%= dark? 'active' : '' %>">Dark</button>
+      <button type="button" data-value="light" class="btn btn-small btn-transparent <%= light? 'active' : '' %>">Light</button>
+      </div>
+      </div>
+      <div class="setting clearfix">
+      <div>Sidebar on the</div>
+      <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+      <% onRight = sidebar == 'right'%>
+      <button type="button" data-value="left" class="btn btn-small btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+      <button type="button" data-value="right" class="btn btn-small btn-transparent <%= onRight? 'active' : '' %>">Right</button>
+      </div>
+      </div>
+      <div class="setting clearfix">
+      <div>Sidebar</div>
+      <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+      <% display = displaySidebar%>
+      <button type="button" data-value="true" class="btn btn-small btn-transparent <%= display? 'active' : '' %>">Show</button>
+      <button type="button" data-value="false" class="btn btn-small btn-transparent <%= display? '' : 'active' %>">Hide</button>
+      </div>
+      </div>
+    script#sidebar-settings-template(type='text/template')
+      <% auto = sidebarState == 'auto'%>
+      <% if (auto) {%>
+      <button type="button"
+      data-value="icons"
+      class="btn-icons btn btn-transparent btn-small">Icons</button>
+      <button type="button"
+      data-value="auto"
+      class="btn-auto btn btn-transparent btn-small">Auto</button>
+      <%} else {%>
+      <button type="button"
+      data-value="auto"
+      class="btn btn-transparent btn-small">Auto</button>
+      <% } %>
