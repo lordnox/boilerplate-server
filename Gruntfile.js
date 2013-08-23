@@ -53,15 +53,8 @@ module.exports = function (grunt) {
                 livereload: true
             },
             stylus: {
-                compile: {
-                    options: {
-                        paths: ['app/components'],
-                        import: ['nib']
-                    },
-                    files: {
-                        '<%= yeoman.app %>/style.css': ['<%= yeoman.app %>/styles/app.stylus']
-                    }
-                },
+                files: ['<%= yeoman.app %>/styles/app.css'],
+                tasks: ['stylus:server'],
                 options: {
                     livereload: false
                 }
