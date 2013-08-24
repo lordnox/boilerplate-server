@@ -82,3 +82,37 @@
 /* line 12 : /home/nox/Software/tmp/boilerplate/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/size.styl */
 
 @media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/nox\/Software\/tmp\/boilerplate\/node_modules\/grunt-contrib-stylus\/node_modules\/nib\/lib\/nib\/size\.styl}line{font-family:\0000312}}
+
+/* line 2 : /home/nox/Software/tmp/boilerplate/app/styles/app.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/nox\/Software\/tmp\/boilerplate\/app\/styles\/app\.styl}line{font-family:\000032}}
+#sidebar {
+  width: 160px;
+  position: absolute;
+}
+
+/* line 6 : /home/nox/Software/tmp/boilerplate/app/styles/app.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/nox\/Software\/tmp\/boilerplate\/app\/styles\/app\.styl}line{font-family:\000036}}
+
+/* line 7 : /home/nox/Software/tmp/boilerplate/app/styles/app.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/nox\/Software\/tmp\/boilerplate\/app\/styles\/app\.styl}line{font-family:\000037}}
+header#header .logo {
+  width: 160px;
+  position: absolute;
+}
+
+/* line 11 : /home/nox/Software/tmp/boilerplate/app/styles/app.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/nox\/Software\/tmp\/boilerplate\/app\/styles\/app\.styl}line{font-family:\0000311}}
+header#header #topbar {
+  margin: 0 0 0 160px;
+}
+
+/* line 14 : /home/nox/Software/tmp/boilerplate/app/styles/app.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/nox\/Software\/tmp\/boilerplate\/app\/styles\/app\.styl}line{font-family:\0000314}}
+#body {
+  margin: 0 0 0 160px;
+}

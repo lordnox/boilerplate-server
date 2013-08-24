@@ -19,10 +19,11 @@ block prepend main
 
     include includes/sidebar
 
-    .content
+    #body.content
+
       h3 Hello
 
-    include includes/footer
+      include includes/footer
 
 block append bottom-script
   script!= bootstrap
@@ -38,6 +39,7 @@ block append bottom-script
     script(src='/scripts/app.js')
     script(src='/scripts/services/database.js')
     script(src='/scripts/directives/notification.js')
+    script(src='/scripts/directives/chat-widget.js')
     script(src='/scripts/controllers/mainController.js')
     script(src='/scripts/controllers/navigationController.js')
   - else

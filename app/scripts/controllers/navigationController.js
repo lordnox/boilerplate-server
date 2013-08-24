@@ -1,5 +1,5 @@
-'use strict';
+(function() {
+  'use strict';
+  angular.module('App').controller('navigationController', function($scope) {});
 
-angular.module('App')
-  .controller('navigationController', function ($scope) {
-  });
+}).call(this);

@@ -1,38 +1,17 @@
-.navbar(ng-controller="navigationController")
+.navbar#topbar(ng-controller="navigationController")
   .navbar-inner
     ul.nav.pull-right
+
       li.visible-phone-landscape
         a#search-toggle(href='#')
           i.icon-search
+
       li.dropdown
         a#messages.dropdown-toggle(href='#', title='Messages', data-toggle='dropdown')
           i.icon-comments
-        ul#messages-menu.dropdown-menu.messages(role='menu')
-          li(role='presentation')
-            a.message(href='#')
-              img(src='img/1.jpg', alt='')
-              .details
-                .sender Jane Hew
-                .text
-                  | Hey, John! How is it going? ...
-          li(role='presentation')
-            a.message(href='#')
-              img(src='img/2.jpg', alt='')
-              .details
-                .sender Alies Rumiancaŭ
-                .text
-                  | I'll definitely buy this template
-          li(role='presentation')
-            a.message(href='#')
-              img(src='img/3.jpg', alt='')
-              .details
-                .sender Michał Rumiancaŭ
-                .text
-                  | Is it really Lore ipsum? Lore ...
-          li(role='presentation')
-            a.text-align-center.see-all(href='#')
-              | See all messages
-              i.icon-arrow-right
+        div(small-chat-widget, messages="recentMessages")
+
+//
       li.dropdown
         a.dropdown-toggle(href='#', title='8 support tickets', data-toggle='dropdown')
           i.icon-group
@@ -77,10 +56,13 @@
             a.text-align-center.see-all(href='#')
               | See all tickets
               i.icon-arrow-right
+
       li.divider
+
       li.hidden-phone
         a#settings(href='#', title='Settings', data-toggle='popover', data-placement='bottom')
           i.icon-cog
+
       li.hidden-phone.dropdown
         a#account.dropdown-toggle(href='#', title='Account', data-toggle='dropdown')
           i.icon-user
@@ -100,9 +82,11 @@
             a.link(href='#')
               i.icon-inbox
               | Inbox
+
       li.visible-phone
         a.btn-navbar(href='#', data-toggle='collapse', data-target='.sidebar', title='')
           i.icon-reorder
+
       li.hidden-phone
         a(href='login.html')
           i.icon-signout

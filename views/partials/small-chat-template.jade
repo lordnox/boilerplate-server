@@ -1,0 +1,11 @@
+ul#messages-menu.dropdown-menu.messages(role='menu')
+  li(role='presentation', ng-repeat="message in messages")
+    a.message(href='#')
+      // img(src='img/1.jpg', alt='')
+      .details
+        .sender {{message.sender}}
+        .text {{message.text}}
+  li(role='presentation')
+    a.text-align-center.see-all(href='#')
+      | See all messages
+      i.icon-arrow-right
